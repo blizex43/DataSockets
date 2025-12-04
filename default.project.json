@@ -1,0 +1,48 @@
+{
+	"name": "roblox-ts-game",
+	"globIgnorePaths": [
+		"**/package.json",
+		"**/tsconfig.json"
+	],
+	"tree": {
+		"$className": "DataModel",
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$path": "luausrc/server",
+			"$ignoreUnknownInstances": true
+		},
+
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"Modules": {
+				"$path": "luausrc/serverstorage",
+				"$ignoreUnknownInstances": true
+			}
+		},
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"TypeScript": {
+				"$ignoreUnknownInstances": true,
+				"$path": "include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": {
+						"$path": "node_modules/@rbxts"
+					},
+					"@flamework": {
+        				"$path": "node_modules/@flamework"
+    				}
+				}
+			},
+			"$ignoreUnknownInstances": true
+		},
+		
+		"HttpService": {
+			"$className": "HttpService",
+			"$properties": {
+				"HttpEnabled": true
+			}
+		}
+	}
+}
